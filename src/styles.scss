@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }
+
+.card-gradient {
+  //background-color: #58126A;
+  //background-color: #F6B2E1;
+  background: rgb(246,178,225);
+  background: linear-gradient(135deg, #A3C9E2, #9618F7);
+
+  border: none;
+}
+
+.card {
+  box-shadow: 0 0 16px lighten(#000, 60%);
+  transition: box-shadow .2s ease-in-out;
+  border-radius: 24px;
+}
+
+.page-section {
+  padding-bottom: 20px;
+}
+
+.page-section-body {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.page-section-headline-wrapper {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+
+.page-section-headline {
+  font-size: 64px;
+  margin-bottom: 0;
+}
+
+.page-section-sub-headline {
+  font-size: 32px;
+  color: #8c8c8c;
+}

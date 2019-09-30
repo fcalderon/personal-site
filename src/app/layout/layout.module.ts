@@ -6,12 +6,17 @@ import { SkillComponent } from './skill/skill.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { SkillGroupComponent } from './skill-group/skill-group.component';
+import { ExperienceGroupComponent } from './experience-group/experience-group.component';
 
 @NgModule({
-  declarations: [NavbarComponent, ProjectComponent, SkillComponent, ExperienceComponent, EducationComponent, SkillGroupComponent],
-  exports: [NavbarComponent, ProjectComponent, SkillComponent, ExperienceComponent, EducationComponent, SkillGroupComponent],
+  declarations: [
+    NavbarComponent, ProjectComponent, SkillComponent, ExperienceComponent, EducationComponent, SkillGroupComponent,
+    ExperienceGroupComponent
+  ],
+  exports: [NavbarComponent, ProjectComponent, SkillComponent, ExperienceComponent, EducationComponent, SkillGroupComponent, ExperienceGroupComponent],
   imports: [
     CommonModule
   ]
 })
-export class LayoutModule { }
+export class LayoutModule {
+}

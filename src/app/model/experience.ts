@@ -4,6 +4,7 @@ export interface ExperienceGroup {
   name: string;
   description?: string;
   experience: Array<Experience>;
+  company: Company;
 }
 
 export interface Company extends Base {

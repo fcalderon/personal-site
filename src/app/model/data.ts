@@ -58,7 +58,7 @@ const AllExperience: { [key: string ]: Experience } = {
   },
   scholarJet: {
     key: 'scholarJet',
-    company: AllCompanies.scholarjet,
+    company: AllCompanies.scholarJet,
     startDate: '06/2017',
     endDate: '12/2017',
     position: {
@@ -72,7 +72,7 @@ const AllExperience: { [key: string ]: Experience } = {
     },
   }
 };
-const AllProjects: { [ key: string ]: Project } = {
+const allProjects: { [ key: string ]: Project } = {
   international: {
     key: 'international-app',
     name: 'International Auto Service Application',
@@ -83,7 +83,7 @@ const AllProjects: { [ key: string ]: Project } = {
   },
 };
 
-const AllEducation: { [ key: string ]: Education } = {
+const allEducation: { [ key: string ]: Education } = {
   northeastern: {
     key: 'northeastern',
     institutionName: 'Northeastern University',
@@ -99,7 +99,7 @@ const AllEducation: { [ key: string ]: Education } = {
     toDate: '2014'
   }
 };
-const AllSkills: { [ key: string ]: Skill } = {
+const allSkills: { [ key: string ]: Skill } = {
   java: { key: 'java', name: 'Java EE/Spring' },
   kotlin: { key: 'kotlin', name: 'Kotlin' },
   mysql: { key: 'mysql', name: 'MySQL/SQL' },
@@ -130,6 +130,7 @@ const resume: Resume = {
     body: [
       {
         name: 'Carbonite',
+        company: AllCompanies.carbonite,
         experience: [
           AllExperience.carbonite1,
           AllExperience.carbonite2,
@@ -138,8 +139,9 @@ const resume: Resume = {
       },
       {
         name: 'ScholarJet',
+        company: AllCompanies.scholarJet,
         experience: [
-          AllExperience.scholarjet
+          AllExperience.scholarJet
         ]
       }
     ]
@@ -151,34 +153,34 @@ const resume: Resume = {
         key: '',
         name: 'Back-end',
         skills: [
-          AllSkills.java,
-          AllSkills.kotlin,
-          AllSkills.mysql,
-          AllSkills.docker
+          allSkills.java,
+          allSkills.kotlin,
+          allSkills.mysql,
+          allSkills.docker
         ]
       },
       {
         key: '',
         name: 'Front-end',
         skills: [
-          AllSkills.angular,
-          AllSkills.typescript,
-          AllSkills.react,
-          AllSkills.node,
-          AllSkills.htmlCss,
-          AllSkills.rxjs
+          allSkills.angular,
+          allSkills.typescript,
+          allSkills.react,
+          allSkills.node,
+          allSkills.htmlCss,
+          allSkills.rxjs
         ]
       },
       {
         key: 'Tools and Services',
         name: 'Tools and Services',
         skills: [
-          AllSkills.aws,
-          AllSkills.azure,
-          AllSkills.jenkins,
-          AllSkills.git,
-          AllSkills.jira,
-          AllSkills.firebase
+          allSkills.aws,
+          allSkills.azure,
+          allSkills.jenkins,
+          allSkills.git,
+          allSkills.jira,
+          allSkills.firebase
         ]
       }
     ]
@@ -186,15 +188,15 @@ const resume: Resume = {
   education: {
     key: '',
     body: [
-      AllEducation.northeastern,
-      AllEducation.bunkerHill
+      allEducation.northeastern,
+      allEducation.bunkerHill
     ]
   },
   projects: {
     key: '',
     body: [
-      AllProjects.scholarJet,
-      AllProjects.international
+      allProjects.scholarJet,
+      allProjects.international
     ]
   }
 };

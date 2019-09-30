@@ -1,0 +1,21 @@
+<div class="card card-gradient">
+  <div class="card-body">
+    <h5 class="card-title">{{ experienceGroup.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted" *ngIf="experienceGroup.description">{{ experienceGroup.description }}</h6>
+    <div class="card-body">
+      <div *ngFor="let experience of experienceGroup.experience" class="experience-group-item"
+           [id]="experience.key">
+        <div class="experience-accordion-header">
+          <p>{{experience.position.name}}</p>
+        </div>
+        <div class="experience-key-items">
+          <ul *ngIf="experience.position && experience.position.keyActivities">
+            <li *ngFor="let activity of experience.position.keyActivities">
+              {{activity}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

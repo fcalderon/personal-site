@@ -15,17 +15,8 @@
     </div>
     <div class="page-section-body">
       <div class="row">
-        <div class="col-6">
-          <div class="card card-gradient" style="height: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
+        <div class="col-3" *ngFor="let project of resume.projects.body">
+         <app-project [project]="project"></app-project>
         </div>
       </div>
     </div>
@@ -37,15 +28,23 @@
     </div>
     <div class="page-section-body">
       <div class="row">
-        <div class="col-6 offset-6">
-          <div class="card card-gradient" style="height: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+        <div class="col-4" *ngFor="let skillGroup of resume.skills.body">
+          <app-skill-group [skillGroup]="skillGroup"></app-skill-group>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-section">
+    <div class="page-section-headline-wrapper">
+      <h2 class="page-section-headline">Experience</h2>
+      <p class="page-section-sub-headline">Projects I've created or contributed to</p>
+    </div>
+    <div class="page-section-body">
+      <div class="row">
+        <div class="col-12" *ngFor="let experienceGroup of resume.experience.body">
+          <div class="row">
+            <div class="col"  *ngFor="let experience of experienceGroup.experience">
+              <app-experience [experience]="experience"></app-experience>
             </div>
           </div>
         </div>
@@ -54,22 +53,13 @@
   </div>
   <div class="page-section">
     <div class="page-section-headline-wrapper">
-      <h2 class="page-section-headline">Other Section</h2>
+      <h2 class="page-section-headline">Education</h2>
       <p class="page-section-sub-headline">Projects I've created or contributed to</p>
     </div>
     <div class="page-section-body">
       <div class="row">
-        <div class="col-6">
-          <div class="card card-gradient" style="height: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
+        <div class="col" *ngFor="let education of resume.education.body">
+          <app-education [education]="education"></app-education>
         </div>
       </div>
     </div>

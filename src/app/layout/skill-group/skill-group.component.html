@@ -1,0 +1,12 @@
+<div class="card card-gradient">
+  <div class="card-body">
+    <h5 class="card-title">{{ skillGroup.name }}</h5>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let skill of skillGroup.skills">
+          {{ skill.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
